@@ -1,6 +1,6 @@
-# Welcome to my Operating Systems Repository!
+# Welcome to my FreeRTOS Repository!
 
-![Imagem de versionamento](./OperatingSystems.png)
+![Imagem de versionamento](./FreeRTOS.png)
 
 This repository was created to insert Operating Systems codes.
-#Contiki #Android #FreeRTOS
+#FreeRTOS #STM32F401RE
