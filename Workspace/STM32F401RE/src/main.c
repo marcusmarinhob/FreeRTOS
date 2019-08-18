@@ -31,11 +31,15 @@ int main(void)
 	SystemCoreClockUpdate();
 
 	// 3. Let's create 2 tasks, task-1 and task-2
-
-
 	xTaskCreate(vTask1Handler, "Task1", configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle1 );
 	xTaskCreate(vTask2Handler, "Task2", configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle2 );
 
+
+	// 4. Start the Scheduler
+	vTaskStartScheduler();
+
+
+	// You will never return here
 	for(;;);
 
 
