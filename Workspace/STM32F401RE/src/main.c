@@ -20,9 +20,13 @@ TaskHandle_t xTaskHandle2 = NULL;
 void vTask1Handler( void *pvParameters);
 void vTask2Handler( void *pvParameters);
 
+// used for semihosting
+extern void initialise_monitor_handles();
 
 int main(void)
 {
+	initialise_monitor_handles();
+
 	// 1.  Resets the RCC clock configuration to the default reset state.
 	// HSI ON, PLL OFF, HSE OFF, system clock = 16MHz, cpu_clock = 16MHz
 	RCC_DeInit();
