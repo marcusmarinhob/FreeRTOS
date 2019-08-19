@@ -8,7 +8,7 @@
   ******************************************************************************
 */
 
-
+#include <stdio.h>
 #include "stm32f4xx.h"
 
 #include "FreeRTOS.h"
@@ -26,6 +26,8 @@ extern void initialise_monitor_handles();
 int main(void)
 {
 	initialise_monitor_handles();
+
+	printf("\n Inside main()");
 
 	// 1.  Resets the RCC clock configuration to the default reset state.
 	// HSI ON, PLL OFF, HSE OFF, system clock = 16MHz, cpu_clock = 16MHz
@@ -58,12 +60,13 @@ void vTask1Handler( void *pvParameters)
 	 * declared static - in which case only one copy of the variable would exist
 	 * and this copy would be shared by each created instance of the task.
 	 */
-	int iVariableExample = 0;
+	//int iVariableExample = 0;
 
 	/* A task will normally be implemented as in infinite loop*/
 	for(;;)
 	{
 		/* The code to implement the task functionality will go here. */
+		printf("\n vTask1Handler()");
 	}
 
 	/* Should the task implementation ever break out of the above loop
@@ -83,12 +86,13 @@ void vTask2Handler( void *pvParameters)
 	 * declared static - in which case only one copy of the variable would exist
 	 * and this copy would be shared by each created instance of the task.
 	 */
-	int iVariableExample = 0;
+	//int iVariableExample = 0;
 
 	/* A task will normally be implemented as in infinite loop*/
 	for(;;)
 	{
 		/* The code to implement the task functionality will go here. */
+		printf("\n vTask2Handler()");
 	}
 
 	/* Should the task implementation ever break out of the above loop
